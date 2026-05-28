@@ -1,14 +1,14 @@
 // src/App.jsx
 
+import React from "react";
+
 import {
-
   BrowserRouter,
-
   Routes,
-
   Route
-
 } from "react-router-dom";
+
+import "./App.css";
 
 
 // ═══════════════════════════════════════
@@ -16,70 +16,65 @@ import {
 // ═══════════════════════════════════════
 
 import {
-
   ThemeProvider
-
 } from "./context/ThemeContext";
 
 import {
-
   AuthProvider
-
 } from "./context/AuthContext";
 
 import {
-
   RouteProvider
-
 } from "./context/RouteContext";
 
 import {
-
   SOSProvider
-
 } from "./context/SOSContext";
-
-
-// ═══════════════════════════════════════
-// LAYOUT
-// ═══════════════════════════════════════
-
-import NavBar
-from "./components/layout/NavBar";
 
 
 // ═══════════════════════════════════════
 // PAGES
 // ═══════════════════════════════════════
 
-import HomePage
-from "./pages/HomePage";
+import HomePage from "./pages/home";
 
-import SOSPage
-from "./pages/SOSPage";
+import SOSPage from "./pages/sos";
 
-import ContactsPage
-from "./pages/ContactsPage";
+import ContactsPage from "./pages/contacts";
 
-import ReportsPage
-from "./pages/ReportsPage";
+import ReportsPage from "./pages/reports";
 
-import FuturePage
-from "./pages/FuturePage";
-
-import NotFoundPage
-from "./pages/NotFoundPage";
+import SettingsPage from "./pages/settings";
 
 
 // ═══════════════════════════════════════
-// GLOBAL UI
+// COMPONENTS
 // ═══════════════════════════════════════
 
-import SOSButton
-from "./components/sos/SOSButton";
+import NavBar from "./components/layout/NavBar";
 
-import Toast
-from "./components/ui/Toast";
+import SOSButton from "./components/sos/SOSButton";
+
+
+// ═══════════════════════════════════════
+// 404 PAGE
+// ═══════════════════════════════════════
+
+function NotFoundPage(){
+
+  return (
+
+    <div style={styles.notFound}>
+
+      <h1>404</h1>
+
+      <p>Page not found</p>
+
+    </div>
+
+  );
+
+}
 
 
 // ═══════════════════════════════════════
@@ -108,90 +103,48 @@ export default function App(){
                 <Routes>
 
                   <Route
-
                     path="/"
-
                     element={<HomePage />}
-
                   />
 
                   <Route
-
                     path="/sos"
-
                     element={<SOSPage />}
-
                   />
 
                   <Route
-
                     path="/contacts"
-
                     element={<ContactsPage />}
-
                   />
 
                   <Route
-
                     path="/reports"
-
                     element={<ReportsPage />}
-
                   />
 
                   <Route
-
-                    path="/future"
-
-                    element={<FuturePage />}
-
+                    path="/settings"
+                    element={<SettingsPage />}
                   />
 
                   <Route
-
                     path="*"
-
                     element={<NotFoundPage />}
-
                   />
 
                 </Routes>
 
 
-                {/* GLOBAL NAVBAR */}
+                {/* NAVBAR */}
 
                 <NavBar />
 
 
-                {/* FLOATING SOS */}
+                {/* FLOATING SOS BUTTON */}
 
                 <SOSButton
-
                   floating={true}
-
-                  size={82}
-
-                  onTrigger={() => {
-
-                    console.log(
-
-                      "Global SOS Triggered"
-
-                    );
-
-                  }}
-
-                />
-
-
-                {/* GLOBAL TOAST */}
-
-                <Toast
-
-                  visible={false}
-
-                  message=""
-
+                  size={80}
                 />
 
               </div>
@@ -231,10 +184,29 @@ const styles = {
 
     position:"relative",
 
-    paddingBottom:"90px",
+    paddingBottom:"90px"
 
-    transition:
-      "background var(--animation-speed) ease"
+  },
+
+  notFound: {
+
+    width:"100%",
+
+    height:"100vh",
+
+    display:"flex",
+
+    flexDirection:"column",
+
+    justifyContent:"center",
+
+    alignItems:"center",
+
+    background:"#0b0b10",
+
+    color:"#ffffff",
+
+    gap:"10px"
 
   }
 
