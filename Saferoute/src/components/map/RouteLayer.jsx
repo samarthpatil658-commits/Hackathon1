@@ -1,18 +1,13 @@
 import { useEffect, useRef } from "react";
 import L from "leaflet";
-
-
 // ═══════════════════════════════════════
 // ROUTE LAYER COMPONENT
 // ═══════════════════════════════════════
 
 export default function RouteLayer({
-
-  map,
-
-  source,
-
-  destination,
+map,
+ source,
+destination,
 
   dangerZones = [],
 
