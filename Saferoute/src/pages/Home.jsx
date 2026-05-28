@@ -6,7 +6,7 @@ import MapView
 from "../components/map/MapView";
 
 import SearchBar
-from "../components/search/SearchBar";
+from "../components/future/SearchBar";
 
 import RiskIndicator
 from "../components/reports/RiskIndicator";
