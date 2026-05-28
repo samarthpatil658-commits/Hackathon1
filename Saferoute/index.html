@@ -1,13 +1,293 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>saferoute</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+
+  <!-- ═══════════════════════════════════════
+       META
+  ═══════════════════════════════════════ -->
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="
+      width=device-width,
+      initial-scale=1.0,
+      maximum-scale=1.0,
+      user-scalable=no
+    "
+  />
+
+  <meta
+    name="theme-color"
+    content="#0b0b10"
+  />
+
+  <meta
+    name="description"
+    content="
+      SafeRoute - Smart safer navigation
+      with emergency SOS, danger zone
+      detection, and live tracking.
+    "
+  />
+
+  <meta
+    name="keywords"
+    content="
+      SafeRoute,
+      women safety,
+      emergency SOS,
+      safe navigation,
+      live tracking,
+      route safety
+    "
+  />
+
+  <meta
+    name="author"
+    content="Chinmay"
+  />
+
+
+  <!-- ═══════════════════════════════════════
+       OPEN GRAPH
+  ═══════════════════════════════════════ -->
+
+  <meta
+    property="og:title"
+    content="SafeRoute"
+  />
+
+  <meta
+    property="og:description"
+    content="
+      Real-time safer navigation and SOS
+      emergency response platform.
+    "
+  />
+
+  <meta
+    property="og:type"
+    content="website"
+  />
+
+  <meta
+    property="og:image"
+    content="/preview.png"
+  />
+
+
+  <!-- ═══════════════════════════════════════
+       FAVICON
+  ═══════════════════════════════════════ -->
+
+  <link
+    rel="icon"
+    type="image/png"
+    href="/favicon.png"
+  />
+
+
+  <!-- ═══════════════════════════════════════
+       GOOGLE FONTS
+  ═══════════════════════════════════════ -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  />
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
+
+  <link
+
+    href="
+      https://fonts.googleapis.com/css2?
+      family=Inter:wght@400;500;600;700;800&
+      display=swap
+    "
+
+    rel="stylesheet"
+
+  />
+
+
+  <!-- ═══════════════════════════════════════
+       LEAFLET CSS
+  ═══════════════════════════════════════ -->
+
+  <link
+
+    rel="stylesheet"
+
+    href="
+      https://unpkg.com/leaflet@1.9.4/dist/leaflet.css
+    "
+
+    integrity="
+      sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=
+    "
+
+    crossorigin=""
+
+  />
+
+
+  <!-- ═══════════════════════════════════════
+       TITLE
+  ═══════════════════════════════════════ -->
+
+  <title>
+
+    SafeRoute • Smart Safer Navigation
+
+  </title>
+
+
+  <!-- ═══════════════════════════════════════
+       GLOBAL STYLES
+  ═══════════════════════════════════════ -->
+
+  <style>
+
+    *{
+
+      margin:0;
+
+      padding:0;
+
+      box-sizing:border-box;
+
+    }
+
+    html{
+
+      scroll-behavior:smooth;
+
+      -webkit-tap-highlight-color:
+        transparent;
+
+    }
+
+    body{
+
+      width:100%;
+
+      min-height:100vh;
+
+      overflow-x:hidden;
+
+      font-family:'Inter',sans-serif;
+
+      background:#0b0b10;
+
+      color:#ffffff;
+
+      text-rendering:optimizeLegibility;
+
+      -webkit-font-smoothing:antialiased;
+
+      -moz-osx-font-smoothing:grayscale;
+
+    }
+
+    #root{
+
+      width:100%;
+
+      min-height:100vh;
+
+    }
+
+    button,
+    input,
+    textarea{
+
+      font-family:'Inter',sans-serif;
+
+      outline:none;
+
+    }
+
+    ::selection{
+
+      background:#00e87a;
+
+      color:#0b0b10;
+
+    }
+
+    ::-webkit-scrollbar{
+
+      width:8px;
+
+      height:8px;
+
+    }
+
+    ::-webkit-scrollbar-thumb{
+
+      background:#2a2a35;
+
+      border-radius:999px;
+
+    }
+
+    ::-webkit-scrollbar-track{
+
+      background:#111118;
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- ═══════════════════════════════════════
+       REACT ROOT
+  ═══════════════════════════════════════ -->
+
+  <div id="root"></div>
+
+
+  <!-- ═══════════════════════════════════════
+       VITE ENTRY
+  ═══════════════════════════════════════ -->
+
+  <script
+    type="module"
+    src="/src/main.jsx"
+  ></script>
+
+
+  <!-- ═══════════════════════════════════════
+       LEAFLET JS
+  ═══════════════════════════════════════ -->
+
+  <script
+
+    src="
+      https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
+    "
+
+    integrity="
+      sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=
+    "
+
+    crossorigin=""
+
+  ></script>
+
+</body>
+
 </html>
