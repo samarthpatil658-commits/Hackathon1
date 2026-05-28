@@ -51,9 +51,9 @@ import SettingsPage from "./pages/settings";
 // COMPONENTS
 // ═══════════════════════════════════════
 
-import NavBar from "./components/layout/NavBar";
+//import NavBar from "/components/NavBar";
 
-import SOSButton from "./components/sos/SOSButton";
+//import SOSButton from "./components/SOSButton";
 
 
 // ═══════════════════════════════════════
